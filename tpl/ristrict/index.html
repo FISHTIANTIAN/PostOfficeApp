@@ -1,0 +1,83 @@
+<main class="page-ristrict">
+	<header>
+		<div class="toolbar">
+			<div class="header-title">
+				<div class="title">专区服务</div>
+			</div>
+		</div>
+	</header>
+	<div class="content">
+		<div class="w-tabbar dwz-tabs full-size">
+			<div class="tab-bar">
+				<a class="tab-item active"><span class="txt-h3">个人代办</span></a>
+				<a class="tab-item"><span class="txt-h3">公共代办</span></a>
+				<a class="tab-item"><span class="txt-h3">部门代办</span></a>
+			</div>
+			<div class="tab-panel tpl-listList">
+				<div class="panel-item unitBox">
+					<div class="scroll-content dwz-scroll">
+						<div class="scroll tpl-listList0">
+
+						</div>
+					</div>
+				</div>
+				<div class="panel-item unitBox">
+					<div class="scroll-content dwz-scroll">
+						<div class="scroll tpl-listList1">
+
+						</div>
+					</div>
+				</div>
+				<div class="panel-item unitBox">
+					<div class="scroll-content dwz-scroll">
+						<div class="scroll tpl-listList2">
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+<script id="tpl-listList0" type="text/html">
+	{{if list}}
+	<ul class="list padding-v">
+		{{each list as item index}}
+		<li class="item padding-h b-line" onclick="biz.ristrict.goto({{item}})"><span>{{item.name}}</span><i class="icon-right icon"></i></li>
+		{{/each}}
+	</ul>
+	{{else}}
+	<div class="no">
+		<div class="no-data"></div>
+		<div class="txt-h3">暂时还没没有信息奥~</div>
+	</div>
+	{{/if}}
+</script>
+<script id="tpl-listList1" type="text/html">
+	{{if list}}
+	<ul class="list padding-v">
+		{{each list as item index}}
+		<li class="item padding-h b-line" onclick="biz.ristrict.goto({{item}})"><span>{{item.name}}</span><i class="icon-right icon"></i></li>
+		{{/each}}
+	</ul>
+	{{else}}
+	<div class="no">
+		<div class="no-data"></div>
+		<div class="txt-h3">暂时还没没有信息奥~</div>
+	</div>
+	{{/if}}
+</script>
+<script id="tpl-listList2" type="text/html">
+	{{if list}}
+	<ul class="list padding-v">
+		{{each list as item index}}
+		<li class="item padding-h b-line" onclick="biz.ristrict.goto({{item}})"><span>{{item.name}}</span><i class="icon-right icon"></i></li>
+		{{/each}}
+	</ul>
+	{{else}}
+	<div class="no">
+		<div class="no-data"></div>
+		<div class="txt-h3">暂时还没没有信息奥~</div>
+	</div>
+	{{/if}}
+</script>

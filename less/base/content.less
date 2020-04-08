@@ -1,0 +1,236 @@
+.view-container {
+	.full-abs;
+	overflow: hidden;
+	background: @defaultBackground;
+	.flex-wrap;
+	.flex-vertical;
+}
+
+main, .page-wrap {
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	.flex-wrap;
+	.flex-vertical;
+}
+
+// 相当于panel，独立完整的内容
+article {
+
+}
+
+// 有联系的内容组
+section {
+
+}
+
+// 标签规定独立的流内容（图像、图表、照片、代码等等）
+figure {
+	figcaption {
+
+	}
+}
+
+.content {
+	position: relative;
+	.flex-item;
+	background: white;
+}
+
+.scroll-content {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
+
+	.scroll {
+		position: absolute;
+		z-index: 0;
+		width: 100%;
+	}
+}
+
+.scroll-content-x {
+	display: block;
+	width: 100%;
+	overflow: hidden;
+
+	.scroll-x {
+		display: table-row;
+
+		li {
+			display: table-cell;
+			padding: 0 10px;
+		}
+	}
+}
+
+.bleed-margin {
+	margin: 0 10px;
+
+	.form-submit {
+		margin: 10px 0;
+	}
+}
+
+.pane {
+	z-index: 5;
+	background: @defaultBackground;
+
+	&.active {
+		position: absolute;
+		z-index: 1;
+	}
+
+	&.cached {
+		position: absolute;
+		z-index: 0;
+	}
+}
+
+.detail-content {
+	background: #fff;
+	padding: 15px;
+	font-size: 14px;
+	color: #333;
+}
+
+/* 一级标题 */
+.txt-h1 {
+	font-size: @l1;
+	color: @titleColor;
+}
+
+/* 二级标题 */
+.txt-h2 {
+	font-size: @l2;
+	color: @titleColor;
+}
+
+/* 三级标题 */
+.txt-h3 {
+	font-size: @l3;
+	color: @titleColor;
+}
+
+/* 正文描述 */
+.txt-desc {
+	font-size: @l4;
+	color: @txtColor;
+}
+
+/* 正文备注 */
+.txt-info {
+	font-size: @l5;
+	color: @infoColor;
+}
+
+.txt-h1, .txt-h2, .txt-h3, .txt-desc, .txt-info {
+	&.center {
+		text-align: center;
+	}
+
+	&.right {
+		text-align: right;
+	}
+}
+
+.item-title1, .item-title2, .item-title3, .item-info1, .item-info2, .item-info3, .txt-line1, .txt-line2, .txt-line3 {
+	display: -webkit-box;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 1;
+	.flex-wrap;
+	.align-center;
+	.icon {
+		display: inline-block;
+		width: 15px;
+		height: 15px;
+		margin: 0 5px;
+	}
+}
+
+.item-title1, .item-title2, .item-title3 {
+	font-size: @l3;
+	line-height: 20px;
+}
+
+.item-info1, .item-info2, .item-info3 {
+	font-size: @l4;
+	color: #777777;
+	line-height: 20px;
+}
+
+.item-title2, .item-info2, .txt-line2 {
+	-webkit-line-clamp: 2;
+}
+
+.item-title3, .item-info3, .txt-line3 {
+	-webkit-line-clamp: 3;
+}
+
+.item-status {
+	display: inline-block;
+	line-height: 20px;
+	width: 50px;
+	overflow: hidden;
+	border-radius: 10px;
+	text-align: center;
+	color: #fff;
+	font-size: 12px;
+	background: #999999;
+
+	&.status-pass {
+		background: #7EBB66;
+	}
+
+	&.status-fail {
+		background: #9EADCB;
+	}
+
+	&.status-pending {
+		background: #F7AF56;
+	}
+
+	&.status-cancel {
+		background: #999999;
+	}
+}
+
+.item-status2 {
+	line-height: 20px;
+	font-weight: bold;
+	padding: 0;
+
+	&.status-pass {
+		color: #7EBB66;
+	}
+
+	&.status-fail {
+		color: #9EADCB;
+	}
+
+	&.status-pending {
+		color: #F7AF56;
+	}
+
+	&.status-cancel {
+		color: #999999;
+	}
+}
+
+.no{
+	.flex-all-center;
+	.flex-vertical;
+	.no-data {
+		background: url("../../images/onData.svg") center no-repeat;
+		background-size: 100% 100%;
+		height: 207px;
+		width: 200px;
+		margin:100px 0 0 0;
+	}
+}

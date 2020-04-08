@@ -1,0 +1,58 @@
+.w-panel {
+	.backdrop-filter;
+	.flex-wrap;
+	.flex-vertical;
+	min-width: 200px;
+	position: relative;
+
+	.panel-header {
+		position: relative;
+		color: @titleColor;
+		font-weight: bold;
+		.flex-wrap;
+		.align-center;
+		.justify-between;
+
+		&.float {
+			position: absolute;
+			z-index: 10;
+			top: 0;
+			left: 0;
+		}
+
+		.txt-h4 {
+
+		}
+
+		.txt-desc {
+			.arrow-r;
+
+			&:after {
+				margin: 0 10px 0 5px;
+			}
+		}
+	}
+
+	.panel-content {
+		position: relative;
+		min-height: 40px;
+		flex: 1;
+		color: @titleColor;
+	}
+
+	.panel-footer {
+		line-height: 40px;
+		font-weight: bold;
+		padding: 0 10px;
+		color: @titleColor;
+	}
+}
+
+//灰色底色面板
+.bottom-panel {
+	background: @bottompanelBackground;
+
+	.panel-1 {
+		background: @panel1Background;
+	}
+}

@@ -1,0 +1,36 @@
+<main>
+	<header>
+		<div class="toolbar">
+			<div class="header-title">
+				<div class="title">登录</div>
+			</div>
+		</div>
+	</header>
+	<div class="content">
+		<div class="w-tabbar dwz-tabs full-size">
+			<div class="tab-panel">
+				<div class="panel-item unitBox">
+					<form method="post" action="{{form_url}}" onsubmit="return validateCallback(this, loginAjaxDone)">
+						<div class="pageFormContent">
+							<div class="item">
+								<div class="item-content">
+									<input type="text" name="username" class="required" placeholder="请输入学号"
+										   data-error="请输入学号">
+								</div>
+							</div>
+							<div class="item">
+								<div class="item-content">
+									<input type="password" name="password" class="required" placeholder="请输入密码"
+										   data-error="请输入密码">
+								</div>
+							</div>
+						</div>
+						<div class="bleed-margin">
+							<button class="form-submit active" type="submit">登录</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>

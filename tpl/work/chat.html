@@ -1,0 +1,52 @@
+<div class="page-wrap">
+
+	<header>
+		<div class="toolbar">
+			<a class="bar-button back-button"><i class="icon icon-back"></i></a>
+			<div class="header-title">
+				<div class="title">聊天窗口</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="content">
+
+		<form class="dwz-list-form">
+			<input type="hidden" name="pageNum" value="1">
+			<input type="hidden" name="uid" value="{{uid}}">
+
+			<div class="scroll-content dwz-list" style="bottom:56px;">
+				<div class="scroll">
+					<div class="pullDown">
+						<span class="pullDownIcon">&nbsp;</span>
+						<span class="pullDownLabel" data-flip="松开加载">加载更多</span>
+					</div>
+
+					<ul class="list chat-list">
+
+					</ul>
+				</div>
+			</div>
+		</form>
+
+		<div class="chat-footer">
+			<div class="chat-keyboard">
+				<div class="icon icon-voice"></div>
+				<div class="textarea-box">
+					<div class="textarea" contenteditable="true" placeholder="对Ta发送消息..."></div>
+					<!--<textarea class="textarea" placeholder="对Ta发送消息..."></textarea>-->
+				</div>
+				<div class="icon icon-send"></div>
+			</div>
+			<div class="chat-voice">
+				<div class="icon icon-keyboard"></div>
+				<div class="voice">按住 说话</div>
+				<div class="icon icon-send"></div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+
+

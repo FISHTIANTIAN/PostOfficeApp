@@ -1,0 +1,30 @@
+<main class="page-my">
+    <header>
+        <div class="toolbar">
+            <div class="header-title">
+                <div class="title">个人中心</div>
+            </div>
+        </div>
+    </header>
+    <div class="content bottom-panel">
+        <div class="head">
+            <div class="headImg">
+                <div class="img"></div>
+                <div class="txt-info">测试账号</div>
+            </div>
+			<div class="txt-h3">切换为用户</div>
+        </div>
+		<ul class="list margin-v">
+			<li class="item padding-h b-line" onclick="$.navView.open({url: `tpl/my/my-history.html?dwz_callback=biz.my.historyRender`,rel: 'history'});">
+				<i class="icon-history iconfont icon"></i><span>我的预约</span><i class="icon-right icon"></i></li>
+			<li class="item padding-h b-line" onclick="$.navView.open({url: `tpl/my/my-attest.html?dwz_callback=biz.my.attestRender`,rel: 'attest'});">
+				<i class="icon-attest iconfont icon"></i><span>我的认证</span><i class="icon-right icon"></i></li>
+			<li class="item padding-h b-line" onclick="$.navView.open({url: `tpl/my/my-feedback.html?dwz_callback=biz.my.feedbackRender`,rel: 'feedback'});">
+				<i class="icon-feedback iconfont icon"></i><span>意见反馈</span><i class="icon-right icon"></i></li>
+			<li class="item padding-h b-line" onclick="$.navView.open({url: `tpl/my/my-about.html?dwz_callback=biz.my.aboutRender`,rel: 'about'});">
+				<i class="icon-about iconfont icon"></i><span>关于我们</span><i class="icon-right icon"></i></li>
+			<li class="item padding-h b-line" onclick="$.navView.open({url: `tpl/my/my-setting.html?dwz_callback=biz.my.settingRender`,rel: 'setting'});">
+				<i class="icon-setting iconfont icon"></i><span>设置</span><i class="icon-right icon"></i></li>
+		</ul>
+    </div>
+</main>

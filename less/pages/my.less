@@ -1,0 +1,155 @@
+.page-my {
+
+	header {
+		background: rgba(255, 255, 255, .2);
+		z-index: 2;
+	}
+
+	.content {
+		.full-abs;
+	}
+
+	.head {
+		background: url("../../images/my/my-bg.png") center no-repeat;
+		background-size: 100% 100%;
+		height: 200px;
+		width: 100%;
+		.flex-all-center;
+		position: relative;
+
+		.headImg {
+			margin-top: 80px;
+			.flex-wrap;
+			.flex-vertical;
+			.align-center;
+
+			.img {
+				height: 60px;
+				width: 60px;
+				border-radius: 50%;
+				background: url("../../images/my/head.png") center no-repeat;
+				background-size: 100% 100%;
+			}
+
+			.txt-info {
+				margin: 10px 0;
+			}
+		}
+
+		.txt-h3 {
+			position: absolute;
+			bottom: 10px;
+			right: 10px;
+			background: rgba(0, 0, 0, .2);
+			border-radius: 10px;
+			height: 23px;
+			width: 80px;
+			text-align: center;
+			color: white;
+			line-height: 23px;
+		}
+	}
+
+	.list {
+		width: 100%;
+		margin-top: 10px;
+		background: @panel1Background;
+
+		.iconfont {
+			height: 18px;
+			width: 18px;
+			margin: 0 10px;
+		}
+	}
+}
+
+.page-about {
+
+	.content {
+		.flex-wrap;
+		.align-center;
+		.flex-vertical;
+
+		.logo {
+			height: 100px;
+			width: 100px;
+			background: url("../../images/app1.png") center no-repeat;
+			background-size: 100% 100%;
+			margin: 50px 0 0 0;
+		}
+
+		.txt-h3 {
+			margin: 20px 0 50px 0;
+		}
+
+		.now {
+			width: 100%;
+			height: 50px;
+			.flex-wrap;
+			.align-center;
+			.justify-between;
+			padding: 0 20px;
+		}
+	}
+}
+
+.page-setting {
+	.content {
+		background: none;
+		.list {
+
+			.item {
+				background: @panel1Background;
+
+				.txt-right {
+					text-align: right;
+					margin-right: 33px;
+				}
+
+				.imghead {
+					height: 65px;
+					width: 90px;
+					border-radius: 50%;
+					background: url("../../images/my/head.png") center no-repeat;
+					background-size: 100% 100%;
+					margin: 5px 0;
+					margin-right: 30px;
+				}
+			}
+			.back {
+				span {
+					font-size: @l3;
+					color: rgba(126,187,102,1);
+					text-align: center;
+				}
+			}
+		}
+	}
+}
+
+.page-password {
+	.content {
+		.flex-wrap;
+		.align-center;
+		.flex-vertical;
+
+		input {
+			width: 100%;
+			height: 50px;
+			.b-line;
+			color: black;
+			text-indent: 10px;
+		}
+
+		.sub {
+			width: 95%;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			background: #7EBB66;
+			border-radius: 8px;
+			color: white;
+			margin-top: 30px;
+		}
+	}
+}

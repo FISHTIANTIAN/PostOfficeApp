@@ -1,0 +1,1 @@
+mycli -h47.94.36.87 -uroot -pyUGXWgaJZ0RcxExL

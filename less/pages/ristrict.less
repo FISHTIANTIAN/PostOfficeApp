@@ -1,0 +1,148 @@
+.page-ristrict{
+	.content {
+		.flex-wrap;
+		.align-center;
+		.justify-between;
+		.flex-vertical;
+
+		.box-card {
+			width: 95%;
+			margin-top: 10px;
+			text-indent: 5px;
+			.box-line;
+			border-radius: 10px;
+
+			.txt-h3 {
+				.b-line;
+				padding: 5px 0;
+				color: rgba(0, 0, 0, .8);
+
+				&:nth-child(1) {
+					background: rgba(65, 200, 218, .7);
+					border-radius: 10px 10px 0 0;
+				}
+
+				&:last-child {
+					border: none;
+				}
+			}
+
+			.txt-info {
+				.b-line;
+				padding: 5px 0;
+				color: rgba(0, 0, 0, .8);
+			}
+		}
+
+		.footer-card {
+			height: 60px;
+			width: 100%;
+			.t-line;
+			.flex-wrap;
+			.align-center;
+
+			.icon {
+				margin: 0 10px 0 20px;
+				height: 23px;
+				width: 20px;
+			}
+
+			.txt-info {
+				padding: 0 5px 0 0;
+			}
+
+
+			.btn {
+				.txt-info;
+				color: black;
+				padding: 3px;
+				margin: 0 0 0 27px;
+				border: 1px solid rgba(0, 0, 0, .2);
+				border-radius: 10px;
+
+				&:active {
+					background: rgba(0, 0, 0, .1);
+				}
+			}
+		}
+	}
+
+	.icon-deng {
+		background-image: url("../../images/icon/deng.svg");
+	}
+}
+
+.page-reservation {
+	.content {
+		.flex-all-center;
+
+		form {
+			.flex-wrap;
+			.flex-vertical;
+			.justify-between;
+			.full-size;
+			padding: 10px 5px;
+			.form-content {
+				.input {
+					.flex-wrap;
+					.align-center;
+					margin-bottom: 10px;
+
+					.txt-h3 {
+						padding: 5px 10px;
+						width: 30%;
+						text-align: right;
+					}
+
+					textarea {
+						width: 60%;
+						border: 1px solid rgba(0, 0, 0, .6);
+						padding: 5px;
+						border-radius: 5px;
+						text-indent: 10px;
+						letter-spacing: 1px;
+					}
+
+					input[type="text"] {
+						width: 60%;
+						border: 1px solid rgba(0, 0, 0, .6);
+						height: 30px;
+						border-radius: 10px;
+						text-indent: 10px;
+					}
+
+					input[type="date"] {
+						width: 60%;
+						border: 1px solid rgba(0, 0, 0, .6);
+						height: 30px;
+						padding-right: 20px;
+						border-radius: 10px;
+						text-indent: 10px;
+						letter-spacing: 3px;
+					}
+				}
+			}
+
+
+			.form-footer {
+				.flex-all-center;
+				width: 100%;
+
+				.flex-item {
+					.flex-all-center;
+
+					input {
+						width: 90%;
+						border: 1px solid rgba(0, 0, 0, .6);
+						height: 30px;
+						border-radius: 10px;
+
+						&:active {
+							background: rgba(0, 0, 0, .2);
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>邮院办</title>
+	<link rel="stylesheet" href="css/animate.css"/>
+	<link rel="stylesheet" href="css/ui.css"/>
+
+	<!-- dev 环境 JS -->
+	<script type="text/javascript" src="js/dwz/template-web.js"></script>
+	<script type="text/javascript" src="js/dwz/dwz.core.js"></script>
+	<script type="text/javascript" src="js/dwz/dwz.util.date.js"></script>
+	<script type="text/javascript" src="js/dwz/dwz.history.js"></script>
+	<script type="text/javascript" src="js/dwz/dwz.touchwipe.js"></script>
+	<script type="text/javascript" src="js/dwz/dwz.effect.js"></script>
+	<script type="text/javascript" src="js/dwz/dwz.ajax.js"></script>
+	<script type="text/javascript" src="js/dwz/dwz.alert.js"></script>
+	<script type="text/javascript" src="js/dwz/dwz.scroll.js"></script>
+	<script type="text/javascript" src="js/dwz/dwz.list.js"></script>
+	<script type="text/javascript" src="js/dwz/dwz.navView.js"></script>
+	<script type="text/javascript" src="js/dwz/dwz.navTab.js"></script>
+	<script type="text/javascript" src="js/dwz/dwz.dialog.js"></script>
+	<script type="text/javascript" src="js/dwz/dwz.slideTab.js"></script>
+	<script type="text/javascript" src="js/dwz/dwz.touchSlide.js"></script>
+	<script type="text/javascript" src="js/dwz/dwz.dropPanel.js"></script>
+	<script type="text/javascript" src="js/dwz/dwz.popPanel.js"></script>
+	<script type="text/javascript" src="js/dwz/dwz.dropdown.js"></script>
+	<script type="text/javascript" src="js/dwz/dwz.lottery.js"></script>
+	<script type="text/javascript" src="js/dwz/dwz.media.js"></script>
+	<script type="text/javascript" src="js/dwz/dwz.tabs.js"></script>
+	<script type="text/javascript" src="js/dwz/dwz.astra.js"></script>
+	<script type="text/javascript" src="js/dwz/dwz.touchWobble.js"></script>
+	<script type="text/javascript" src="js/dwz/dwz.loading.js"></script>
+	<script type="text/javascript" src="js/dwz/dwz.ui.js"></script>
+	<script type="text/javascript" src="js/biz.conf.js"></script>
+	<script type="text/javascript" src="js/biz.common.js"></script>
+	<script type="text/javascript" src="js/api.js"></script>
+	<script type="text/javascript" src="js/biz.user.js"></script>
+	<script type="text/javascript" src="js/biz.websocket.js"></script>
+	<script type="text/javascript" src="js/biz.school.js"></script>
+	<script type="text/javascript" src="js/biz.ristrict.js"></script>
+	<script type="text/javascript" src="js/biz.my.js"></script>
+	<script type="text/javascript" src="js/biz.work.js"></script>
+
+	<script>
+		// 配制环境
+		$.extend(biz.server, {
+			ENV: "LIVE" //DEV,LIVE
+		});
+
+		$.extend(dwz.config, {
+			statusCode: {
+				ok: 200,
+				error: 300,
+				timeout: 301,
+				expired: 302
+			},
+			keys: {
+				statusCode: "status",
+				message: "message"
+			}
+		});
+
+		// media 定义html根节点font-size, 用于rem
+		(function () {
+			function screenChange() {
+				var op = {
+					width: document.documentElement.clientWidth,
+					height: document.documentElement.clientHeight,
+					landscape: false
+				};
+
+				var width = op.width > op.height ? op.width : op.height;
+				document.documentElement.style.fontSize =
+						parseInt((width * 80) / 640) + "px";
+
+				var $body = $("body");
+				if (op.width > op.height) {
+					$body.addClass("landscape");
+				} else {
+					$body.removeClass("landscape");
+				}
+
+				if ($.event.hasTouch) {
+					$body.addClass("hasTouch");
+				} else {
+					$body.removeClass("hasTouch");
+				}
+			}
+
+			screenChange();
+			window.addEventListener("resize", screenChange, false);
+		})();
+
+		$(function () {
+
+			$.dialog.init();
+			initUserInfo(); // 用户信息初始化
+
+			$.navView.init();
+			$.dropPanel.init();
+			$.navTab.init({openIndex: 0});
+			//插件注册
+			dwz.regPlugins.push(function($p){
+				biz.fixStatusBar($p);
+			});
+
+			//插件初始化
+			$(document).initUI();
+
+			$.loading && $.loading.init($("#progressBar .loading")); // canvas loading 特效
+			var ajaxbg = $("#progressBar").hide();
+			$(document)
+				.on("ajaxStart", function () {
+					ajaxbg.show();
+				})
+				.on("ajaxStop", function () {
+					ajaxbg.hide();
+				});
+
+			if ($.history) $.history.init(function (hash) {
+
+				//浏览器刷新监测地址栏, 根据hash定位
+				if (hash) {
+					var args = hash.split(';');
+					if (args.length == 2) {
+						$.navTab.open({tabid: args[0], url: args[1]});
+					} else if (args.length == 3) {
+						$.navView.open({url: args[2], rel: args[1]});
+					}
+				}
+
+			});
+
+		});
+
+		apiready = function () {
+			biz.safeAreaTop = api.safeArea.top;
+			biz.fixStatusBar($(document));
+
+			$(window).on('hash.empty.pop', function () {
+				api.confirm({
+					title: '退出提示：',
+					msg: '确定要退出程序吗？',
+					buttons: ['确定', '取消']
+				}, function (ret, err) {
+					if (ret.buttonIndex == 1) {
+						api.closeWidget({
+							id: 'A6030092358133',  //填写自己的id
+							retData: {name: 'closeWidget'},
+							silent: true
+						});
+					}
+				});
+			});
+		};
+		document.addEventListener('touchmove', function (event) {
+			dwz.speed.cal(event); // 计算加速度
+			event.preventDefault();//阻止默认的处理方式(阻止下拉滑动的效果)
+		}, {passive: false});//passive 参数不能省略，用来兼容ios和android
+	</script>
+
+</head>
+
+<body>
+<div id="nav-tab" class="view-container">
+	<div class="tab-panel">
+		<div class="panel-item unitBox"></div>
+		<div class="panel-item unitBox"></div>
+		<div class="panel-item unitBox"></div>
+		<div class="panel-item unitBox"></div>
+	</div>
+	<div class="tab-bar">
+		<a class="tab-item" data-href="tpl/school/index.html?dwz_callback=biz.school.schoolRender" tabid="school">
+			<div class="flex-wrap flex-vertical align-center"><i class="icon icon-1"></i><span>讯息</span></div>
+		</a>
+		<a class="tab-item" data-href="tpl/ristrict/index.html?dwz_callback=biz.ristrict.ristrictRender" tabid="ristrict">
+			<div class="flex-wrap flex-vertical align-center"><i class="icon icon-2"></i><span>办理</span></div>
+		</a>
+		<a class="tab-item" data-href="tpl/work/index.html?dwz_callback" tabid="work">
+			<div class="flex-wrap flex-vertical align-center"><i class="icon icon-3"></i><span>咨询</span></div>
+		</a>
+		<a class="tab-item" data-href="tpl/my/index.html?dwz_callback=biz.my.myrender" tabid="my">
+			<div class="flex-wrap flex-vertical align-center"><i class="icon icon-4"></i><span>我的</span></div>
+		</a>
+	</div>
+</div>
+
+<div id="progressBar">
+	<div class="loading"></div>
+</div>
+</body>
+
+</html>

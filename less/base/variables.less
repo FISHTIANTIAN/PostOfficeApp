@@ -1,0 +1,268 @@
+// Color
+@titleColor: rgba(0, 0, 0, .8);
+@txtColor: rgba(0, 0, 0, .6);
+@labelColor: rgba(0, 0, 0, .8);
+@infoColor: rgba(0, 0, 0, .6);
+@borderColor: rgba(0, 0, 0, .1);
+@linkColor: rgba(0, 0, 0, .6);
+@linkColorActive: #FF003B;
+@btnTxtColor: rgba(0, 0, 0, .6);
+@headerButtonTxt: #666;
+@btnTxtColorActive: #fff;
+@tabTxtColor: #555;
+@tabTxtColorActive: #222;
+
+// Background
+@defaultBackground: #F7F7F7;
+@hoverBackground: rgba(240, 240, 240, .8);
+@inputBackground: rgba(0, 0, 0, 0, .05);
+@btnBackground: rgba(0,0,0,0.10);
+@btnBackgroundActive: #C7000B;
+@tableBackground: rgba(0, 0, 0, .03);
+@bottompanelBackground: rgba(0, 0, 0, .01);
+@panel1Background: rgba(255, 255,255, 1);
+
+// Fonts
+@fontEN: -apple-system-font, "Helvetica Neue", "Roboto", "Segoe UI";
+@fontCN: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei";
+@fontSans: sans-serif;
+@fontDefault: @fontEN, @fontCN, @fontSans;
+
+@l1: 18px; // 页面顶部主标题
+@l2: 16px; // 一级标题
+@l3: 14px; // 二级标题
+@l4: 12px; // 三级标题
+@l5: 10px; // 正文
+@l6: 8px; // 备注
+
+@pagePadding: 5px;
+
+.margin-all {
+	margin: @pagePadding;
+}
+
+.margin-h {
+	margin: 0 @pagePadding;
+}
+
+.margin-v {
+	margin: @pagePadding 0;
+}
+
+.padding-all {
+	padding: @pagePadding;
+}
+
+.padding-h {
+	padding: 0 @pagePadding;
+}
+
+.padding-v {
+	padding: @pagePadding 0;
+}
+
+.tap-color(@color:rgba(0,0,0,0)) {
+	-webkit-tap-highlight-color: @color; // 事件监听的元素被点击的时候会被高亮显示
+}
+
+.filter-blur {
+	backdrop-filter: saturate(180%) blur(20px);
+}
+
+.full-abs {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+.full-fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+// Size
+.full-size {
+	width: 100%;
+	height: 100%;
+}
+
+// Flex
+.flex-wrap {
+	display: flex;
+}
+
+.flex-item {
+	flex: 1;
+	position: relative;
+}
+
+.flex-vertical {
+	flex-flow: column;
+}
+
+.flex-row {
+	flex-direction: row;
+}
+
+.align-center {
+	align-items: center;
+}
+
+.align-start {
+	align-items: flex-start;
+}
+
+.align-end {
+	align-items: flex-end;
+}
+
+.justify-center {
+	justify-content: center;
+}
+
+.justify-start {
+	justify-content: flex-start;
+}
+
+.justify-end {
+	justify-content: flex-end;
+}
+
+.justify-around {
+	justify-content: space-around;
+}
+
+
+.justify-between {
+	justify-content: space-between;
+}
+
+.flex-all-center {
+	.flex-wrap;
+	.align-center;
+	.justify-center;
+}
+
+//边框
+.boxLine(@b-width:"1px 1px 1px 1px", @c: @borderColor) {
+	content: " ";
+	border-top: 1px solid @c;
+	border-style: solid;
+	border-width: @b-width;
+	border-color: @c;
+	color: @c;
+}
+
+.t-line {
+	.boxLine(1px 0 0 0);
+}
+
+.r-line {
+	.boxLine(0 1px 0 0);
+}
+
+.b-line {
+	.boxLine(0 0 1px 0);
+}
+
+.l-line {
+	.boxLine(0 0 0 1px);
+}
+
+.box-line {
+	.boxLine(1px 1px 1px 1px);
+}
+
+.linear-gradient(@color1:#c12, @color2:#c02) {
+	background-image: linear-gradient(-90deg, @color1 0%, @color2 100%);
+}
+
+.box-shadow(@color: rgba(0,0,0,0.10)) {
+	box-shadow: 0 8px 19px 0 @color;
+}
+
+.divider {
+	display: flex;
+	overflow: hidden;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	min-height: 10px;
+	background: @defaultBackground;
+}
+
+// Item
+.align-items(@val:center) {
+	align-items: @val;
+}
+
+.justify-content(@val:center) {
+	justify-content: @val;
+}
+
+.clearfix {
+	&:after {
+		content: ".";
+		display: block;
+		height: 0;
+		visibility: hidden;
+		clear: both;
+	}
+}
+
+.pre-wrap {
+	white-space: pre-wrap;
+}
+
+.hover {
+	opacity: .8;
+}
+
+.nodata {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	background-image: radial-gradient(top, circle farthest-corner, #3c3b52 0%, #252233 80%);
+
+	text {
+		font-size: @l3;
+		color: #FFFFFF;
+	}
+
+	.title {
+		font-size: @l1;
+		color: #FFFFFF;
+	}
+}
+
+.backdrop-filter {
+	background: rgba(0, 0, 0, 0.05);
+	backdrop-filter: blur(3px);
+	//filter: blur(3px);
+}
+
+.arrow-r {
+	&:after {
+		content: " ";
+		display: inline-block;
+		opacity: 0.5;
+		width: 12px;
+		height: 12px;
+		transform: scaleX(-1) rotate(-45deg);
+		border-top: 1px solid @titleColor;
+		border-left: 1px solid @titleColor;
+	}
+}

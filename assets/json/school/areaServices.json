@@ -1,0 +1,55 @@
+{
+    "status": 200,
+    "message": "",
+    "data": {
+        "list1": [
+            {
+                "name": "热点1",
+                "time": "2020/04/01",
+                "info": "热点：xxxxxxxxxxxxxx",
+                "link": "热点：.link",
+                "dep": "宣传部",
+                "initiator": "张1",
+                "type": "list1"
+            },
+            {
+                "name": "热点2",
+                "time": "2020/04/02",
+                "info": "热点：：xxxxxxxxxxxxxx",
+                "link": "热点：.link",
+                "dep": "宣传部",
+                "initiator": "张2",
+                "type": "list2"
+            },
+            {
+                "name": "热点3",
+                "time": "2020/04/03",
+                "info": "热点：：xxxxxxxxxxxxxx",
+                "link": "热点：.link",
+                "dep": "宣传部",
+                "initiator": "张3",
+                "type": "list3"
+            }
+        ],
+        "list2": [
+            {
+                "name": "学校公告1",
+                "time": "2020/04/01",
+                "info": "学校公告：xxxxxxxxxxxxxx",
+                "link": "学校公告：.link",
+                "dep": "宣传部",
+                "initiator": "张1",
+                "type": "list1"
+            },
+            {
+                "name": "学校公告2",
+                "time": "2020/04/02",
+                "info": "学校公告：：xxxxxxxxxxxxxx",
+                "link": "学校公告：.link",
+                "dep": "宣传部",
+                "initiator": "张2",
+                "type": "list2"
+            }
+        ]
+    }
+}

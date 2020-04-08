@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="11px" viewBox="0 0 14 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>下拉选择</title>
+    <desc>Created with Sketch.</desc>
+    <g id="下拉选择" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.800000012">
+        <polygon id="三角形" fill="#000000" transform="translate(7.000000, 5.500000) rotate(-180.000000) translate(-7.000000, -5.500000) " points="7 0 14 11 0 11"></polygon>
+    </g>
+</svg>

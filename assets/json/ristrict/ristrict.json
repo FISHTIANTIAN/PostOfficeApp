@@ -1,0 +1,110 @@
+{
+    "status": 200,
+    "message": "",
+    "data": {
+        "listes": [
+            {
+                "list": [
+                    {
+                        "name": "个人代办1",
+                        "time": "2020/04/01",
+                        "info": "xxxxxxxxxxxxxx",
+                        "dep": "宿管会",
+                        "initiator": "张1",
+                        "type": "list1",
+                        "data": [
+                            "材料1",
+                            "材料2",
+                            "材料3",
+                            "材料4"
+                        ],
+                        "status": "未开始"
+                    },
+                    {
+                        "name": "个人代办2",
+                        "time": "2020/04/02",
+                        "info": "xxxxxxxxxxxxxx",
+                        "dep": "宿管会",
+                        "initiator": "张2",
+                        "type": "list2",
+                        "data": [
+                            "材料1",
+                            "材料2",
+                            "材料3",
+                            "材料4"
+                        ],
+                        "status": "进行中"
+                    }
+                ]
+            },
+            {
+                "list": [
+                    {
+                        "name": "公共代办1",
+                        "time": "2020/04/01",
+                        "info": "xxxxxxxxxxxxxx",
+                        "dep": "宿管会",
+                        "initiator": "张1",
+                        "type": "list1",
+                        "data": [
+                            "材料1",
+                            "材料2",
+                            "材料3",
+                            "材料4"
+                        ],
+                        "status": "未开始"
+                    },
+                    {
+                        "name": "公共代办2",
+                        "time": "2020/04/02",
+                        "info": "xxxxxxxxxxxxxx",
+                        "dep": "宿管会",
+                        "initiator": "张2",
+                        "type": "list2",
+                        "data": [
+                            "材料1",
+                            "材料2",
+                            "材料3",
+                            "材料4"
+                        ],
+                        "status": "进行中"
+                    }
+                ]
+            },
+            {
+                "list": [
+                    {
+                        "name": "部门代办1",
+                        "time": "2020/04/01",
+                        "info": "xxxxxxxxxxxxxx",
+                        "dep": "宿管会",
+                        "initiator": "张1",
+                        "type": "list1",
+                        "data": [
+                            "材料1",
+                            "材料2",
+                            "材料3",
+                            "材料4"
+                        ],
+                        "status": "未开始"
+                    },
+                    {
+                        "name": "部门代办2",
+                        "time": "2020/04/02",
+                        "info": "xxxxxxxxxxxxxx",
+                        "dep": "宿管会",
+                        "initiator": "张2",
+                        "type": "list2",
+                        "data": [
+                            "材料1",
+                            "材料2",
+                            "材料3",
+                            "材料4"
+                        ],
+                        "status": "进行中"
+                    }
+                ]
+            }
+        ]
+    }
+}

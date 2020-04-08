@@ -1,0 +1,75 @@
+{
+    "status": 200,
+    "message": "",
+    "data": {
+        "listes": [
+            {
+                "type" : "wuxing"
+            },
+            {
+                "type" : "zhuanshenben",
+                "list": [
+                    {
+                        "name": "转身本考试结果1",
+                        "time": "2020/04/01",
+                        "info": "转身本考试结果：xxxxxxxxxxxxxx",
+                        "link": "wuxing.link",
+                        "dep": "学校",
+                        "initiator": "张1",
+                        "type": "list1"
+                    },
+                    {
+                        "name": "转身本考试结果2",
+                        "time": "2020/04/02",
+                        "info": "转身本考试结果：xxxxxxxxxxxxxx",
+                        "link": "wuxing.link",
+                        "dep": "学校",
+                        "initiator": "张2",
+                        "type": "list2"
+                    },
+                    {
+                        "name": "转身本考试结果3",
+                        "time": "2020/04/03",
+                        "info": "转身本考试结果：xxxxxxxxxxxxxx",
+                        "link": "wuxing.link",
+                        "dep": "学校",
+                        "initiator": "张3",
+                        "type": "list3"
+                    }
+                ]
+            },
+            {
+                "type" : "zhuanqu",
+                "list": [
+                    {
+                        "name": "zhuanqu1",
+                        "time": "2020/04/01",
+                        "info": "zhuanqu：xxxxxxxxxxxxxx",
+                        "link": "wuxing.link",
+                        "dep": "团委",
+                        "initiator": "张1",
+                        "type": "list1"
+                    },
+                    {
+                        "name": "zhuanqu2",
+                        "time": "2020/04/02",
+                        "info": "zhuanqu：xxxxxxxxxxxxxx",
+                        "link": "wuxing.link",
+                        "dep": "团委",
+                        "initiator": "张2",
+                        "type": "list2"
+                    },
+                    {
+                        "name": "zhuanqu3",
+                        "time": "2020/04/03",
+                        "info": "zhuanqu：xxxxxxxxxxxxxx",
+                        "link": "wuxing.link",
+                        "dep": "团委",
+                        "initiator": "张3",
+                        "type": "list3"
+                    }
+                ]
+            }
+        ]
+    }
+}

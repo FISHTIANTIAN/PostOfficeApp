@@ -1,0 +1,37 @@
+footer {
+	.flex-all-center;
+	height: 40px;
+	font-size: @l4;
+
+	&.float {
+		background: transparent;
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+	}
+
+	// 半透明背景
+	position: absolute;
+	bottom: 0;
+	left: 20vw;
+	right: 20vw;
+	z-index: 200;
+}
+
+.footer-placeholder {
+	&:after {
+		content: " ";
+		display: block;
+		height: 80px;
+	}
+}
+
+.footerLogo {
+	position: fixed;
+	bottom: 10px;
+	right: 40px;
+
+	img {
+		height: 30px;
+	}
+}

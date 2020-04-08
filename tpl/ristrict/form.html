@@ -1,0 +1,37 @@
+<main class="page-ristrict">
+	<header>
+		<div class="toolbar">
+			<a class="bar-button back-button"><i class="icon icon-back"></i></a>
+			<div class="header-title">
+				<div class="title">事件详情</div>
+			</div>
+		</div>
+	</header>
+	<div class="content">
+		<div class="scroll-content dwz-scroll full-size">
+			<div class="scroll full-size">
+				<div class="full-size flex-wrap justify-between align-center flex-vertical">
+					<div class="box-card">
+						<div class="txt-h3">{{name}}</div>
+						<div class="txt-info">{{info}}</div>
+						<div class="txt-h3">活动时间：{{time}}</div>
+						<div class="txt-h3">负责部门：{{dep}}</div>
+						<div class="txt-h3">负责人：{{initiator}}</div>
+						<div class="txt-h3">
+							{{each data as item index}}
+							<div class="item">{{index+1}}、{{item}}</div>
+							{{/each}}
+						</div>
+						<div class="txt-h3">活动状态：{{status}}</div>
+					</div>
+					<div class="footer-card">
+						<div class="icon icon-deng"></div>
+						<div class="txt-info r-line">咨询</div>
+							<div class="btn" onclick="$.navView.open({url:'tpl/ristrict/reservation.html?dwz_callback=biz.ristrict.reservationRender&name={{name}}&time={{time}}&dep={{dep}}&initiator={{initiator}}', rel: 'from'})">在线预约</div>
+							<div class="btn" onclick="$.navView.open({url:'tpl/work/chat.html', rel: 'chat'})">在线咨询</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>

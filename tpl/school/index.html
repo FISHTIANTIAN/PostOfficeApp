@@ -1,0 +1,62 @@
+<main class="page-school">
+    <header>
+        <div class="toolbar">
+            <div class="header-title">
+                <div class="title">学校讯息</div>
+            </div>
+        </div>
+    </header>
+    <div class="content bottom-panel">
+        <div class="scroll-content dwz-scroll">
+            <div class="scroll">
+                <div class="padding-all panel-1">
+                    <div class="full-size flex-wrap justify-between align-center">
+                        <div class="txt-info">热点关注</div>
+                        <a class="txt-info" target="navView"
+                           data-href="tpl/school/areaServices.html?dwz_callback=biz.school.servicesRender" rel="">更多</a>
+                    </div>
+                    <div class="slideBox padding-v" data-loop="false" data-auto-play="true">
+                        <div class="bd">
+                            <ul class="dwz-preview-img">
+                                <li><img src="images/pic/house03.png" style="height: 100%"></li>
+                                <li><img src="images/pic/house02.png" style="height: 100%"></li>
+                            </ul>
+                        </div>
+                        <div class="hd">
+                            <ul></ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="padding-all margin-v panel-1 tpl-listTwo"></div>
+                <div class="padding-all margin-v panel-1 tpl-listList"></div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script id="tpl-listTwo" type="text/html">
+    {{if listTwo}}
+    <div class="full-size flex-wrap justify-between align-center">
+        <div class="txt-info">特色服务</div>
+    </div>
+    <div class="padding-v flex-wrap justify-between align-center">
+        <a class="school-announcement wuxing" data-index="0" data-type="wuxing"><span>{{listTwo[0].name}}</span></a>
+        <a class="school-announcement zhuanshenben" data-index="1"
+           data-type="zhuanshenben"><span>{{listTwo[1].name}}</span></a>
+    </div>
+    {{/if}}
+</script>
+
+<script id="tpl-listList" type="text/html">
+    <div class="full-size flex-wrap justify-between align-center">
+        <div class="txt-info">专区服务</div>
+    </div>
+    <ul class="list padding-v">
+        {{each listList as item index}}
+        <li class="item padding-h b-line" data-index={{index}} data-type={{item.type}}><span>{{item.name}}</span><i
+                class="icon-right icon"></i></li>
+        {{/each}}
+    </ul>
+</script>
+
+

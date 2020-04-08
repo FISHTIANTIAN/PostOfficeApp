@@ -1,0 +1,46 @@
+{
+    "status": 200,
+    "message": "",
+    "data": {
+        "listTwo": [
+            {
+                "name": "五星文明寝室公告",
+                "type": "wuxing"
+            },
+            {
+                "name": "专升本信息公告",
+                "type": "zhuanshenben"
+            }
+        ],
+        "listList": [
+            {
+                "name": "团委",
+                "type": "zhuanqu"
+            },
+            {
+                "name": "学校",
+                "type": "zhuanqu"
+            },
+            {
+                "name": "分院",
+                "type": "zhuanqu"
+            },
+            {
+                "name": "党支部",
+                "type": "zhuanqu"
+            },
+            {
+                "name": "专业",
+                "type": "zhuanqu"
+            },
+            {
+                "name": "班级",
+                "type": "zhuanqu"
+            },
+            {
+                "name": "个人",
+                "type": "zhuanqu"
+            }
+        ]
+    }
+}

@@ -1,0 +1,309 @@
+
+/* 抽奖转盘 */
+.lottery-rotate {
+	.full-abs;
+	background-size: cover;
+	margin: 0 auto;
+	background-repeat: no-repeat;
+	backface-visibility: hidden;
+	perspective: 1000px;
+	&:after {
+		content: '';
+		.full-abs;
+		z-index: -1;
+		background-image: url('../../images/lottery/rotate/lottery-background.png');
+		background-size: cover;
+	}
+	.lottery-header {
+		margin: 100px auto;
+		display: flex;
+		justify-content: center;
+	}
+	.lottery-content {
+		position: absolute;
+		top: 480px;
+		width: 100%;
+		height: auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+	.lottery-footer {
+		position: absolute;
+		bottom: 10%;
+		.flex-all-center;
+		flex-direction: column;
+		width: 100%;
+		.info-title {
+			font-size: @l3;
+			display: inline-block;
+			padding: 5px 10px;
+			border-radius: 3px;
+			background-color: #ff8201;
+			color: #fff;
+			width: 200px;
+			text-align: center;
+		}
+		.desc-wrapper {
+			padding: 24px;
+			background-color: #fdaa23;
+			color: #fff;
+			margin-top: 40px;
+			width: 70%;
+			.desc {
+				font-size: @l4;
+				padding: 10px 20px;
+				line-height: 150%;
+				background-color: #ff8201;
+			}
+		}
+	}
+	.radius-bg {
+		width: 880px;
+		height: 880px;
+		background-image: url('../../images/lottery/rotate/lottery-light.png');
+	}
+	.circle-box {
+		position: absolute;
+		left: 90px;
+		top: 90px;
+		overflow: hidden;
+		width: 700px;
+		height: 700px;
+		border-radius: 50%;
+	}
+	.prize {
+		position: absolute;
+		width: 350px;
+		height: 350px;
+		transform-origin: right bottom;
+	}
+
+	.start {
+		background-image: url('../../images/lottery/rotate/lottery-button.png');
+		//background-position: 0 -20px;
+		background-size: cover;
+		position: absolute;
+		top: 50%;
+		width: 320px;
+		height: 320px;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background-repeat: no-repeat;
+	}
+	.turntable {
+		position: relative;
+	}
+	.count-4 {
+		.prize:nth-child(1) {
+			transform: rotate(90deg);
+			background: #ffda3c;
+		}
+		.prize:nth-child(2) {
+			transform: rotate(180deg);
+			background: #ffc838;
+		}
+		.prize:nth-child(3) {
+			transform: rotate(270deg);
+			background: #ffda3c;
+		}
+		.prize:nth-child(4) {
+			transform: rotate(360deg);
+			background: #ffc838;
+		}
+		.prize-dialog {
+			position: absolute;
+			top: 100px;
+			left: 100px;
+			width: 500px;
+			height: 500px;
+			/* sknew角度等于上级容器，旋转角度等于1/2上级容器 */
+			transform: rotate(-45deg);
+			text-align: center;
+			font-size: @l3;
+			color: #ff5a00;
+			font-weight: 400;
+		}
+	}
+	.count-5 {
+		.prize:nth-child(1) {
+			transform: rotate(72deg) skewY(18deg);
+			background: #ffda3c;
+		}
+		.prize:nth-child(2) {
+			transform: rotate(144deg) skewY(18deg);
+			background: #ffc838;
+		}
+		.prize:nth-child(3) {
+			transform: rotate(216deg) skewY(18deg);
+			background: #ffda3c;
+		}
+		.prize:nth-child(4) {
+			transform: rotate(288deg) skewY(18deg);
+			background: #ffc838;
+		}
+		.prize:nth-child(5) {
+			transform: rotate(360deg) skewY(18deg);
+			background: #ffba3c;
+		}
+		.prize-dialog {
+			position: absolute;
+			top: 100px;
+			left: 100px;
+			width: 500px;
+			height: 500px;
+			transform: skewY(-18deg) rotate(-36deg);
+			text-align: center;
+			font-size: @l3;
+			color: #ff5a00;
+			font-weight: 400;
+		}
+	}
+	.count-6 {
+		.prize:nth-child(1) {
+			transform: rotate(60deg) skewY(30deg);
+			background: #ffda3c;
+		}
+		.prize:nth-child(2) {
+			transform: rotate(120deg) skewY(30deg);
+			background: #ffc838;
+		}
+		.prize:nth-child(3) {
+			transform: rotate(180deg) skewY(30deg);
+			background: #ffda3c;
+		}
+		.prize:nth-child(4) {
+			transform: rotate(240deg) skewY(30deg);
+			background: #ffc838;
+		}
+		.prize:nth-child(5) {
+			transform: rotate(300deg) skewY(30deg);
+			background: #ffda3c;
+		}
+		.prize:nth-child(6) {
+			transform: rotate(360deg) skewY(30deg);
+			background: #ffc838;
+		}
+		.prize-dialog {
+			position: absolute;
+			top: 100px;
+			left: 100px;
+			width: 500px;
+			height: 500px;
+			transform: skewY(-30deg) rotate(-30deg);
+			text-align: center;
+			font-size: @l3;
+			color: #ff5a00;
+			font-weight: 400;
+		}
+	}
+	.count-8 {
+		.prize:nth-child(1) {
+			transform: rotate(45deg) skewY(45deg);
+			background: #ffda3c;
+		}
+		.prize:nth-child(2) {
+			transform: rotate(90deg) skewY(45deg);
+			background: #ffc838;
+		}
+		.prize:nth-child(3) {
+			transform: rotate(135deg) skewY(45deg);
+			background: #ffda3c;
+		}
+		.prize:nth-child(4) {
+			transform: rotate(180deg) skewY(45deg);
+			background: #ffc838;
+		}
+		.prize:nth-child(5) {
+			transform: rotate(225deg) skewY(45deg);
+			background: #ffda3c;
+		}
+		.prize:nth-child(6) {
+			transform: rotate(270deg) skewY(45deg);
+			background: #ffc838;
+		}
+		.prize:nth-child(7) {
+			transform: rotate(315deg) skewY(45deg);
+			background: #ffda3c;
+		}
+		.prize:nth-child(8) {
+			transform: rotate(0deg) skewY(45deg);
+			background: #ffc838;
+		}
+		.prize-dialog {
+			position: absolute;
+			top: 100px;
+			left: 100px;
+			width: 500px;
+			height: 500px;
+			font-size: @l3;
+			color: #ff5a00;
+			font-weight: 400;
+			text-align: center;
+			/* sknew角度等于上级容器，旋转角度等于1/2上级容器 */
+			transform: skewY(-45deg) rotate(-22.5deg);
+		}
+	}
+}
+
+.lottery-dialog-wrapper {
+	font-size: @l3;
+	position: absolute;
+	width: 780px;
+	height: 780px;
+	top: 46%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	.flex-all-center;
+	flex-direction: column;
+	background-image: url('../../images/lottery/rotate/red-packet.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	.lottery-prize {
+		background-image: url('../../images/lottery/rotate/line-prize.png');
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		position: absolute;
+		top: 80px;
+		height: 100px;
+		.flex-all-center;
+		flex-direction: column;
+		padding: 10px 40px;
+		color: #ffdb59;
+		box-shadow: 0 -120px 180px 0 #ecdec0;
+		.row-prize-samll {
+			font-size: @l4;
+		}
+		.row-prize-large {
+			font-size: @l3;
+		}
+	}
+	.congradulation {
+		color: #fff;
+	}
+	.prize-num {
+		margin-top: 30px;
+		display: inline-block;
+		padding: 5px 30px;
+		border-radius: 3px;
+		color: #ffdb59;
+		background-color: #f22228;
+	}
+	.get-prize {
+		width: 80%;
+		height: 140px;
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		background-image: url('../../images/lottery/rotate/get-prize.png');
+		position: absolute;
+		bottom: 100px;
+	}
+
+	.regret-background {
+		width: 100%;
+		height: 300px;
+		background-image: url('../../images/lottery/rotate/regret-background.png');
+	}
+}

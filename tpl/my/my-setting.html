@@ -1,0 +1,22 @@
+<form class="page-wrap page-setting bottom-panel">
+	<header>
+		<div class="toolbar">
+			<a class="bar-button back-button"><i class="icon icon-back"></i></a>
+			<div class="header-title">
+				<div class="title">设置</div>
+			</div>
+		</div>
+	</header>
+	<div class="content">
+		<ul class="list">
+			<li class="item padding-h b-line flex-wrap align-center justify-around"><span>头像</span><span class="txt-right imghead"></span></li>
+			<li class="item padding-h b-line flex-wrap align-center justify-around"><span>昵称</span><span class="txt-right">测试账号</span></li>
+			<li class="item padding-h b-line flex-wrap align-center justify-around"><span>学号</span><span class="txt-right">20170608120</span></li>
+			<li class="item padding-h b-line flex-wrap align-center justify-around"
+				onclick="$.navView.open({url: `tpl/my/password.html?dwz_callback=biz.my.passwordRender`,rel: 'pass'});">
+				<span>修改密码</span><span class="txt-right"></span><i class="icon-right icon"></i></li>
+
+			<li class="item padding-h margin-v b-line flex-all-center back" id="exitSystemButton"><span>退出登录</span></li>
+		</ul>
+	</div>
+</form>
